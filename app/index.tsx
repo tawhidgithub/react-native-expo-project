@@ -1,7 +1,6 @@
 import { Text, View } from "react-native";
-import SplashScreen from "./Modules/Splash Screen/SplashScreen";
 import { useEffect, useState } from "react";
-import HomeScreen from "@/app/Modules/Home Screen/HomeScreen";
+import DashBoard from "./Modules/DashBoard/DashBoard";
 
 export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,5 +11,9 @@ export default function Index() {
     }, 3000);
   });
 
-  return <>{isLoading ? <SplashScreen /> : <HomeScreen />}</>;
+  return (
+    <>
+      <DashBoard />
+    </>
+  );
 }
